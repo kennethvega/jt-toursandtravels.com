@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Navbar from './component/Navbar';
+import Navbar from './component/navigation/NavbarDesktop';
 
 function App() {
   return (
