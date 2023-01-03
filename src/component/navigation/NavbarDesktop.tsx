@@ -13,7 +13,7 @@ const NavbarDesktop = () => {
         <div className="h-20 flex justify-between items-center">
           {/* <img src={logo} alt="jt-toursandtravels-logo" /> */}
           <h1 className="text-2xl font-semibold text-darkBlue">JT-Tours&Travels</h1>
-          <ul className="flex gap-7 text-lg">
+          <ul className="flex gap-7">
             <li>
               <a href="">Home</a>
             </li>
