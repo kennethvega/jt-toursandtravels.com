@@ -39,21 +39,21 @@
   }
 
   input {
-    @apply bg-gray-100  h-10 p-2;
+    @apply h-10 p-2;
   }
   textarea {
-    @apply bg-gray-100  h-28 p-2;
+    @apply h-28 p-2;
   }
 }
 
 a {
   display: inline-block;
   position: relative;
-
+  color: #656565;
   text-decoration: none;
 }
 a:hover {
-  color: #0087ca;
+  color: #5297ff;
 }
 a::after {
   content: '';
@@ -61,8 +61,8 @@ a::after {
   width: 100%;
   transform: scaleX(0);
   border-radius: 5px;
-  height: 0.05em;
-  bottom: -1.8rem;
+  height: 0.1em;
+  bottom: 0;
   left: 0;
   background: currentcolor;
   transform-origin: bottom right;
@@ -71,5 +71,5 @@ a::after {
 a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
-  color: #0087ca;
+  color: #5297ff;
 }

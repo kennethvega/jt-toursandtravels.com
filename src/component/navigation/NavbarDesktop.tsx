@@ -1,17 +1,21 @@
 import React from 'react';
 import Container from '../utility/Container';
 import logo from '../../assets/JT-tours&travels.jpg';
+import { useScrollPosition } from '../../hooks/useScrollPosition';
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(' ');
+}
 const NavbarDesktop = () => {
+  const scrollPosition = useScrollPosition();
   return (
-    <div className="border-b">
+    <div className={classNames(scrollPosition > 100 ? 'shadow' : 'shadow-none', `sticky top-0  z-50 w-full `)}>
       <Container>
         <div className="h-20 flex justify-between items-center">
-          <img src={logo} alt="jt-toursandtravels-logo" />
-          <ul className="flex gap-7">
+          {/* <img src={logo} alt="jt-toursandtravels-logo" /> */}
+          <h1 className="text-2xl font-semibold text-darkBlue">JT-Tours&Travels</h1>
+          <ul className="flex gap-7 text-lg">
             <li>
-              <a href="" className="hover">
-                Home
-              </a>
+              <a href="">Home</a>
             </li>
             <li>
               <a href="">Travel packages</a>
