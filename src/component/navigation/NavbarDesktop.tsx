@@ -8,7 +8,7 @@ function classNames(...classes: string[]) {
 const NavbarDesktop = () => {
   const scrollPosition = useScrollPosition();
   return (
-    <div className={classNames(scrollPosition > 100 ? 'shadow' : 'shadow-none', `sticky top-0  z-50 w-full `)}>
+    <div className={classNames(scrollPosition > 100 ? 'shadow' : 'shadow-none', `sticky top-0  z-50 w-full bg-white `)}>
       <Container>
         <div className="h-20 flex justify-between items-center">
           {/* <img src={logo} alt="jt-toursandtravels-logo" /> */}

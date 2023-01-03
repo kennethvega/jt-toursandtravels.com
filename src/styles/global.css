@@ -37,13 +37,6 @@
   label {
     @apply flex flex-col w-[30rem];
   }
-
-  input {
-    @apply h-10 p-2;
-  }
-  textarea {
-    @apply h-28 p-2;
-  }
 }
 
 a {

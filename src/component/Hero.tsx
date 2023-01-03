@@ -17,7 +17,7 @@ const Hero = () => {
             </div>
             <div className="mt-10">
               <p className="text-gray">Partnership with</p>
-              <div className="flex gap-5 items-center">
+              <div className="flex gap-10 items-center">
                 <img src={cebuPacific} alt="cebu pacific logo" />
                 <img src={deptTourism} alt="department of tourism logo" />
               </div>
