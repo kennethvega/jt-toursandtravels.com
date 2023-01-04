@@ -15,19 +15,29 @@ const NavbarDesktop = () => {
           <h1 className="text-2xl font-semibold text-darkBlue">JT-Tours&Travels</h1>
           <ul className="flex gap-7">
             <li>
-              <a href="">Home</a>
+              <a href="" className="link p-2">
+                Home
+              </a>
             </li>
             <li>
-              <a href="">Travel packages</a>
+              <a href="" className="link p-2">
+                Travel packages
+              </a>
             </li>
             <li>
-              <a href="">About</a>
+              <a href="" className="link p-2">
+                About
+              </a>
             </li>
             <li>
-              <a href="">FAQ's</a>
+              <a href="" className="link p-2">
+                FAQ's
+              </a>
             </li>
             <li>
-              <a href="">Contact</a>
+              <a href="" className="link p-2">
+                Contact
+              </a>
             </li>
           </ul>
         </div>

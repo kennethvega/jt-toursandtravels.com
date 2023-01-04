@@ -39,16 +39,16 @@
   }
 }
 
-a {
+.link {
   display: inline-block;
   position: relative;
   color: #656565;
   text-decoration: none;
 }
-a:hover {
+.link:hover {
   color: #5297ff;
 }
-a::after {
+.link::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -61,7 +61,7 @@ a::after {
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
-a:hover::after {
+.link:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
   color: #5297ff;

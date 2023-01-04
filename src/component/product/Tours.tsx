@@ -7,7 +7,7 @@ const Tours = () => {
   return (
     <section>
       <Container>
-        <h3 className="text-center mb-6 text-2xl font-semibold text-darkBlue">DISCOVER OUR BEST DEALS</h3>
+        <h3 className="text-center mb-6 text-2xl font-semibold text-blue">DISCOVER OUR BEST DEALS</h3>
         <ToursList />
       </Container>
     </section>

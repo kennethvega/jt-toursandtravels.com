@@ -1,38 +1,31 @@
-import React, { useEffect, useState } from 'react';
-import { getAllProducts } from '../../services/toursService';
-import { ProductType } from '../../ts/toursType';
+import { useEffect, useState } from 'react';
+import { FILTER_PRODUCTS, selectFilteredProducts } from '../../redux/features/products/filterSlice';
+import { getAllProducts } from '../../redux/features/products/productSlice';
+import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import Search from '../Search';
 import ToursCard from './ToursCard';
 
 const ToursList = () => {
-  const [products, setProduct] = useState([]);
-  // fetch data
+  const dispatch = useAppDispatch();
+  const { products, isLoading, isError, message } = useAppSelector((state) => state.product);
+  const filteredProducts = useAppSelector(selectFilteredProducts);
+  const [search, setSearch] = useState('');
   useEffect(() => {
-    getAllProducts()
-      .then((response) => {
-        console.log(response);
-        setProduct(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    // get all products
+    if (products.length === 0) {
+      dispatch(getAllProducts());
+    }
   }, []);
 
-  // useEffect(() => {
-  //   // get all products
-  //   if (isLoggedIn && products.length === 0) {
-  //     dispatch(getAllProducts());
-  //   }
-  // }, [isLoggedIn]);
+  useEffect(() => {
+    dispatch(FILTER_PRODUCTS({ products, search }));
+  }, [products, search, dispatch]);
 
-  // useEffect(() => {
-  //   dispatch(FILTER_PRODUCTS({ products, search }));
-  // }, [products, search, dispatch]);
   return (
     <div>
-      <Search />
+      <Search value={search} onChange={(e: any) => setSearch(e.target.value)} />
       <div className="flex gap-10 flex-wrap justify-center mt-10">
-        {products.map((product: ProductType) => (
+        {filteredProducts.map((product: any) => (
           <ToursCard key={product._id} product={product} />
         ))}
       </div>

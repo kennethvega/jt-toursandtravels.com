@@ -3,11 +3,10 @@ type SearchProps = {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-// const Search = ({ value, onChange }: SearchProps) => {
-const Search = () => {
+const Search = ({ value, onChange }: SearchProps) => {
   return (
     <div className="mx-auto flex justify-center">
-      <input type="text" placeholder="Search a product" className="bg-[#ECECEC] rounded-full px-5 py-3 w-[35rem]" />
+      <input value={value} onChange={onChange} type="text" placeholder="Search a product" className="bg-[#ECECEC] rounded-full px-5 py-3 w-[35rem]" />
     </div>
   );
 };
