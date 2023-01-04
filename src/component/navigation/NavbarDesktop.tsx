@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '../utility/Container';
-
+import { HashLink as Link } from 'react-router-hash-link';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -11,32 +11,34 @@ const NavbarDesktop = () => {
     <div className={classNames(scrollPosition > 100 ? 'shadow' : 'shadow-none', `sticky top-0  z-50 w-full bg-white `)}>
       <Container>
         <div className="h-16 flex justify-between items-center">
-          <h1 className="text-2xl font-semibold text-darkBlue">JT-Tours&Travels</h1>
+          <Link to="/#">
+            <h1 className="text-2xl font-semibold text-darkBlue">JT-Tours&Travels</h1>
+          </Link>
           <ul className="flex gap-7">
             <li>
-              <a href="" className="link p-2">
+              <Link to="/#" className="link p-2">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="" className="link p-2">
+              <Link to="/#product" className="link p-2">
                 Travel packages
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="" className="link p-2">
+              <Link to="/#about" className="link p-2">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="" className="link p-2">
+              <Link to="/#faq" className="link p-2">
                 FAQ's
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="" className="link p-2">
+              <Link to="/#contact" className="link p-2">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

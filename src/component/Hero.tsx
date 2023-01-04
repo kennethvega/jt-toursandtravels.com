@@ -4,6 +4,7 @@ import heroImage from '../assets/jt-hero-image.webp';
 import cebuPacific from '../assets/cebu-pacific.webp';
 import deptTourism from '../assets/department-tourism.webp';
 import Button from './utility/Button';
+import { HashLink as Link } from 'react-router-hash-link';
 const Hero = () => {
   return (
     <Container>
@@ -12,8 +13,10 @@ const Hero = () => {
           <div className="flex flex-col gap-5 max-w-2xl">
             <h1 className="text-5xl font-bold text-darkBlue">Travel Around The World With JT Tours & Travels</h1>
             <h3 className="text-gray text-2xl">The best travel agency description, and the best travel agency description</h3>
-            <div className="mt-10">
-              <Button>Explore travel packages</Button>
+            <div className="mt-6">
+              <Link to="/#product">
+                <Button>Explore travel packages</Button>
+              </Link>
             </div>
             <div className="mt-10">
               <p className="text-gray">Partnership with</p>

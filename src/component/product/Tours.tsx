@@ -5,10 +5,10 @@ import ToursList from './ToursList';
 
 const Tours = () => {
   return (
-    <section>
+    <section id="product">
       <Container>
         <div className="flex justify-center">
-          <h3 className="text-center mb-6 text-2xl font-semibold text-darkBlue border-b-8 border-blue py-2">DISCOVER OUR BEST DEALS</h3>
+          <h3 className="text-center mb-6 mt-14 text-2xl font-semibold text-darkBlue border-b-8 border-blue py-2">DISCOVER OUR BEST DEALS</h3>
         </div>
         <ToursList />
       </Container>
