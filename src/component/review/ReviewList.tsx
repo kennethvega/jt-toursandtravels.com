@@ -25,14 +25,13 @@ const ReviewList = () => {
         navigation={true}
         effect="slide"
         speed={800}
-        pagination={true}
         loop={true}
+        grabCursor={true}
         breakpoints={{
           640: {
             slidesPerView: 2,
             spaceBetween: 20,
           },
-
           1024: {
             slidesPerView: 3,
             spaceBetween: 50,

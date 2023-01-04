@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '../utility/Container';
-import logo from '../../assets/JT-tours&travels.jpg';
+
 import { useScrollPosition } from '../../hooks/useScrollPosition';
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -10,8 +10,7 @@ const NavbarDesktop = () => {
   return (
     <div className={classNames(scrollPosition > 100 ? 'shadow' : 'shadow-none', `sticky top-0  z-50 w-full bg-white `)}>
       <Container>
-        <div className="h-20 flex justify-between items-center">
-          {/* <img src={logo} alt="jt-toursandtravels-logo" /> */}
+        <div className="h-16 flex justify-between items-center">
           <h1 className="text-2xl font-semibold text-darkBlue">JT-Tours&Travels</h1>
           <ul className="flex gap-7">
             <li>

@@ -73,3 +73,21 @@
 .swiper-button-next {
   right: 0 !important;
 }
+
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
+/* .out {
+  transform: rotate(-180deg);
+  transition: transform 500ms ease;
+} */
+
+.over {
+  transform: rotate(-180deg);
+  transition: transform 300ms ease;
+}
+
+.out {
+  transform: rotate(-360deg);
+  transition: transform 300ms ease;
+}

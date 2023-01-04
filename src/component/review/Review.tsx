@@ -6,7 +6,10 @@ const Review = () => {
   return (
     <Container>
       <section className="m-20">
-        <h3 className="text-center mb-6 text-2xl font-semibold text-blue">WE MAKE PEOPLE GENUINELY HAPPY</h3>
+        <div className="flex justify-center">
+          <h3 className="mb-10 text-2xl font-semibold text-darkBlue border-b-8 border-blue py-2">WE MAKE PEOPLE GENUINELY HAPPY</h3>
+        </div>
+
         <ReviewList />
       </section>
     </Container>

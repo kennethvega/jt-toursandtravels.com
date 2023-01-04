@@ -18,9 +18,8 @@ const ToursCard = ({ product }: ToursCardProps) => {
         <span className="flex items-center text-gray text-lg gap-1">
           <IoLocationSharp className="text-blue" /> {product.country.charAt(0).toUpperCase() + product.country.slice(1)}
         </span>
-        <div className="mt-3">
-          <span className="text-gray mt-10 cursor-pointer hover:text-blue">Learn more &rarr;</span>
-        </div>
+
+        <span className="link text-gray mt-6 mb-3 cursor-pointer hover:text-blue">Learn more &rarr;</span>
       </div>
     </div>
   );
