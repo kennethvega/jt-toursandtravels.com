@@ -4,7 +4,7 @@ import App from './App';
 import './styles/global.css';
 // Import Swiper styles
 import 'swiper/css/bundle';
-
+// import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 

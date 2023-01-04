@@ -10,7 +10,7 @@ const FaqCard = ({ faq }: FaqItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="bg-[#fff] border-gray shadow p-4 cursor-pointer mt-2">
-      <div className="flex justify-between items-center hover:text-blue" onClick={() => setIsOpen(!isOpen)}>
+      <div className="flex justify-between items-center hover:text-blue p-3" onClick={() => setIsOpen(!isOpen)}>
         <p className={`${isOpen ? 'text-blue' : 'text-black'} flex items-center gap-3`}>
           <BsQuestionCircle className="w-4 h-4" /> {faq.question}
         </p>

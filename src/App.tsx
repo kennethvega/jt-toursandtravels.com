@@ -1,21 +1,20 @@
-import Hero from './component/Hero';
 import Navbar from './component/navigation/NavbarDesktop';
-import Tours from './component/product/Tours';
-import Review from './component/review/Review';
-import Faq from './component/faq/Faq';
-import About from './component/About';
-import { BrowserRouter } from 'react-router-dom';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Test from './component/Test';
+import Home from './pages/Home';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Hero />
-      <Tours />
-      <About />
-      <Review />
-      <Faq />
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/tour/:id" element={<Test />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
