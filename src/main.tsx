@@ -2,6 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './styles/global.css';
+// Import Swiper styles
+import 'swiper/css/bundle';
+
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 import { store } from './redux/store';
 import { Provider } from 'react-redux';
 

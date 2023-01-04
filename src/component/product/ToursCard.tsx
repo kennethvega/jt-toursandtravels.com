@@ -1,6 +1,6 @@
 import React from 'react';
 import { IoLocationSharp } from 'react-icons/io5';
-import { ProductType } from '../../ts/toursType';
+import { ProductType } from '../../ts/productTypes';
 
 type ToursCardProps = {
   product: ProductType;
