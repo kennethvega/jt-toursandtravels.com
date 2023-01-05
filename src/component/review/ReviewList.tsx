@@ -19,9 +19,8 @@ const ReviewList = () => {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="max-w-[70rem] mx-auto">
       <Swiper
-        modules={[Navigation, Pagination]}
         navigation={true}
         effect="slide"
         speed={800}
@@ -29,21 +28,25 @@ const ReviewList = () => {
         grabCursor={true}
         breakpoints={{
           640: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 20,
           },
-          900: {
+          1014: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {
             slidesPerView: 3,
-            spaceBetween: 20,
+            spaceBetween: 30,
           },
         }}
+        modules={[Navigation, Pagination]}
       >
-        {testimonials &&
-          testimonials.map((review) => (
-            <SwiperSlide key={review._id}>
-              <ReviewCard review={review} />
-            </SwiperSlide>
-          ))}
+        {testimonials.map((review) => (
+          <SwiperSlide key={review._id}>
+            <ReviewCard review={review} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

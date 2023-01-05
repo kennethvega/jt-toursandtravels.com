@@ -2,7 +2,7 @@ import React from 'react';
 import { ImQuotesRight } from 'react-icons/im';
 const ReviewCard = ({ review }: any) => {
   return (
-    <div className="bg-[#fff] max-w-[20rem] rounded-md shadow  p-5">
+    <div className="bg-[#fff] min-w-[20rem] min-h-[15rem] rounded-md shadow  p-5">
       <ImQuotesRight className="text-blue mb-2 text-2xl" />
       <p>{review.message}</p>
       <div className="flex items-center gap-5">
