@@ -29,7 +29,7 @@ const ToursList = () => {
       <Search value={search} onChange={(e: any) => setSearch(e.target.value)} />
       {filteredProducts.length > 0 ? (
         <>
-          <motion.div layout className="flex gap-10 flex-wrap justify-center mt-10">
+          <motion.div layout className="flex gap-6 flex-wrap justify-center items-center mt-10">
             <AnimatePresence>
               {filteredProducts.map((product: any) => (
                 <ToursCard product={product} key={product._id} />

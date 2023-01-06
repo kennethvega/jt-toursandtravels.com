@@ -5,6 +5,7 @@ import Hero from '../component/Hero';
 import Tours from '../component/product/Tours';
 import Review from '../component/review/Review';
 import { motion } from 'framer-motion';
+import Contact from '../component/Contact';
 const Home = () => {
   return (
     <>
@@ -18,6 +19,10 @@ const Home = () => {
         <Review />
       </motion.section>
       <Faq />
+      <div id="contact"></div>
+      <section className="-mt-10 pb-10">
+        <Contact />
+      </section>
     </>
   );
 };

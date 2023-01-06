@@ -9,7 +9,7 @@ type ToursCardProps = {
 
 const ToursCard = ({ product }: ToursCardProps) => {
   return (
-    <motion.div layout animate={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 30 }} exit={{ opacity: 0, y: 30 }} transition={{ duration: 0.3 }} className="bg-[#fff] rounded-md shadow overflow-hidden">
+    <motion.div layout initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 30 }} transition={{ duration: 0.3 }} className="bg-[#fff] rounded-md shadow overflow-hidden">
       <img src={product.image?.imageURL} alt="tours image" className="w-[20rem]" />
       <div className="p-2">
         <div className="flex justify-between">

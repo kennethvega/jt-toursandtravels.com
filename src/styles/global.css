@@ -75,9 +75,8 @@
 }
 
 .ReactCollapse--collapse {
-  transition: height 500ms;
+  transition: height 300ms;
 }
-
 
 .over {
   transform: rotate(-180deg);
