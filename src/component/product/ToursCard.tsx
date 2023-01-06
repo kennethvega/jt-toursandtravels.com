@@ -2,18 +2,14 @@ import React from 'react';
 import { IoLocationSharp } from 'react-icons/io5';
 import { ProductType } from '../../ts/productTypes';
 import { HashLink as Link } from 'react-router-hash-link';
+import { motion } from 'framer-motion';
 type ToursCardProps = {
   product: ProductType;
 };
 
 const ToursCard = ({ product }: ToursCardProps) => {
-  // <li>
-  //   <Link to="/#product" className="link p-2">
-  //     Travel packages
-  //   </Link>
-  // </li>;
   return (
-    <div className="bg-[#fff] rounded-md shadow overflow-hidden">
+    <motion.div layout animate={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 30 }} exit={{ opacity: 0, y: 30 }} transition={{ duration: 0.3 }} className="bg-[#fff] rounded-md shadow overflow-hidden">
       <img src={product.image?.imageURL} alt="tours image" className="w-[20rem]" />
       <div className="p-2">
         <div className="flex justify-between">
@@ -28,7 +24,7 @@ const ToursCard = ({ product }: ToursCardProps) => {
 
         <span className="link text-gray mt-6 mb-3 cursor-pointer hover:text-blue">Learn more &rarr;</span>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

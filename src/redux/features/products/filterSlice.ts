@@ -1,7 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../../store';
-
-const initialState = {
+type InitialStateType = {
+  filteredProducts: object[];
+};
+const initialState: InitialStateType = {
   filteredProducts: [],
 };
 

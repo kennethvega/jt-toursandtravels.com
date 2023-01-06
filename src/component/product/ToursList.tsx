@@ -4,11 +4,12 @@ import { getAllProducts } from '../../redux/features/products/productSlice';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import Search from '../Search';
 import ToursCard from './ToursCard';
-
+import { AnimatePresence, motion } from 'framer-motion';
+import { ProductType } from '../../ts/productTypes';
 
 const ToursList = () => {
   const dispatch = useAppDispatch();
-  const { products, isLoading, isError, message } = useAppSelector((state) => state.product);
+  const { products } = useAppSelector((state) => state.product);
   const filteredProducts = useAppSelector(selectFilteredProducts);
   const [search, setSearch] = useState('');
   const nodeRef = useRef(null);
@@ -24,15 +25,22 @@ const ToursList = () => {
   }, [products, search, dispatch]);
 
   return (
-    <div>
+    <motion.div viewport={{ once: true, amount: 0.3 }} initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'linear' }}>
       <Search value={search} onChange={(e: any) => setSearch(e.target.value)} />
-      {filteredProducts === undefined && <p>Tours not found</p>}
-      <div className="flex gap-10 flex-wrap justify-center mt-10">
-        {filteredProducts.map((product: any) => (
-          <ToursCard product={product} />
-        ))}
-      </div>
-    </div>
+      {filteredProducts.length > 0 ? (
+        <>
+          <motion.div layout className="flex gap-10 flex-wrap justify-center mt-10">
+            <AnimatePresence>
+              {filteredProducts.map((product: any) => (
+                <ToursCard product={product} key={product._id} />
+              ))}
+            </AnimatePresence>
+          </motion.div>
+        </>
+      ) : (
+        <p className="text-center mt-10">No tour package found</p>
+      )}
+    </motion.div>
   );
 };
 
