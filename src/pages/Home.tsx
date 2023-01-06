@@ -6,9 +6,10 @@ import Tours from '../component/product/Tours';
 import Review from '../component/review/Review';
 import { motion } from 'framer-motion';
 import Contact from '../component/Contact';
+
 const Home = () => {
   return (
-    <>
+    <main>
       <Hero />
       <section id="product" className="pt-[64px]">
         <Tours />
@@ -23,7 +24,7 @@ const Home = () => {
       <section className="-mt-10 pb-10">
         <Contact />
       </section>
-    </>
+    </main>
   );
 };
 

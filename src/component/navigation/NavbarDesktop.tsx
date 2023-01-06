@@ -9,7 +9,7 @@ function classNames(...classes: string[]) {
 const NavbarDesktop = () => {
   const scrollPosition = useScrollPosition();
   return (
-    <div className={classNames(scrollPosition > 100 ? 'shadow' : 'shadow-none', `sticky top-0  z-50 w-full bg-white `)}>
+    <header className={classNames(scrollPosition > 100 ? 'shadow' : 'shadow-none', `sticky top-0  z-50 w-full bg-white `)}>
       <Container>
         <motion.div initial={{ y: -30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.3, ease: 'easeInOut' }} className="h-16 flex justify-between items-center">
           <Link to="/#">
@@ -44,7 +44,7 @@ const NavbarDesktop = () => {
           </ul>
         </motion.div>
       </Container>
-    </div>
+    </header>
   );
 };
 
