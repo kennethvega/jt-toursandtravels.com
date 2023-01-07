@@ -1,18 +1,22 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './component/Footer';
 import NavbarDesktop from './component/navigation/NavbarDesktop';
-import Test from './component/Test';
+import ScrollToTop from './component/ScrollToTop';
+
 import Home from './pages/Home';
+import ProductDetails from './pages/ProductDetails';
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <NavbarDesktop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/tour/:id" element={<Test />} />
-        </Routes>
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/tour/:id" element={<ProductDetails />} />
+          </Routes>
+        </ScrollToTop>
         <Footer />
       </BrowserRouter>
     </>

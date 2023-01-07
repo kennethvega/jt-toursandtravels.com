@@ -9,8 +9,8 @@ type ToursCardProps = {
 
 const ToursCard = ({ product }: ToursCardProps) => {
   return (
-    <motion.div layout initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 30 }} transition={{ duration: 0.3 }} className="bg-[#fff] rounded-md shadow overflow-hidden border-b-4 border-blue">
-      <img src={product.image?.imageURL} alt="tours image" className="w-[20rem]" />
+    <motion.div layout initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 30 }} transition={{ duration: 0.3 }} className="bg-[#fff] rounded-md shadow overflow-hidden border-b-4 border-blue h-[23rem] w-[19rem]">
+      <img src={product.image?.imageURL} alt="tours image" className="w-[20rem] h-[15rem]" />
       <div className="p-2">
         <div className="flex justify-between">
           <Link to={`/tour/${product._id}`}>
@@ -21,8 +21,9 @@ const ToursCard = ({ product }: ToursCardProps) => {
         <span className="flex items-center text-gray text-lg gap-1">
           <IoLocationSharp className="text-blue" /> {product.country.charAt(0).toUpperCase() + product.country.slice(1)}
         </span>
-
-        <span className="link text-gray mt-6 mb-3 cursor-pointer hover:text-blue">Learn more &rarr;</span>
+        <Link to={`/tour/${product._id}`}>
+          <span className="link text-gray mt-6 mb-3 cursor-pointer hover:text-blue">Learn more &rarr;</span>
+        </Link>
       </div>
     </motion.div>
   );

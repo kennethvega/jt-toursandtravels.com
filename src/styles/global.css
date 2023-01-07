@@ -91,3 +91,7 @@
 .grid-cols-4-custom {
   grid-template-columns: 1fr 1fr 1fr 10%;
 }
+
+.grid-cols-2-custom {
+  grid-template-columns: 35% 1fr;
+}

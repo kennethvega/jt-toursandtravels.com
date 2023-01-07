@@ -13,6 +13,7 @@ const Footer = () => {
             <span className="flex items-center gap-3 text-gray">
               <IoLocationSharp /> Philippines
             </span>
+            <p className="text-sm mt-2 text-gray">Copyright © by JT-Tours&Travels, Inc. All rights reserved.</p>
           </div>
           <div className="flex flex-col gap-3">
             <p className="font-semibold">Contact us</p>
@@ -61,8 +62,8 @@ const Footer = () => {
           </div>
           <div>
             <p className="font-semibold">Social links</p>
-            <div className="flex gap-5 mt-6 text-xl">
-              <BsFacebook className="cursor-pointer" />
+            <div className="flex gap-5 mt-6 text-xl text-gray">
+              <BsFacebook className="cursor-pointer  hover:text-blue" />
               <BsTwitter className="cursor-not-allowed" />
             </div>
           </div>

@@ -6,7 +6,7 @@ import productService from './productServices';
 import { RootState } from '../../store';
 
 type State = {
-  product: Product | null;
+  product: ProductType | null;
   products: ProductType[];
   isLoading: boolean;
   isError: boolean;

@@ -3,7 +3,7 @@ export type ProductType = {
   country: string;
   city: string;
   price: string;
-  description: string;
+  description: string | Node;
   image: ImageType | null;
   date: string;
   createdAt: string;
