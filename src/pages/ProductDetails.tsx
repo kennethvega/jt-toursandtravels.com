@@ -7,6 +7,8 @@ import { useAppDispatch, useAppSelector } from '../redux/hooks';
 import { ProductType } from '../ts/productTypes';
 import DOMPurify from 'dompurify';
 import Button from '../component/utility/Button';
+import Modal from '../component/utility/Modal';
+import BookingForm from '../component/BookingForm';
 const ProductDetails = () => {
   const { id } = useParams();
   // redux global state
@@ -15,6 +17,7 @@ const ProductDetails = () => {
   const productData = useAppSelector(selectProduct);
   // local state
   const [product, setProduct] = useState<ProductType | null>(productData);
+  const [isOpen, setIsOpen] = useState(false);
   // const navigate = useNavigate();
 
   // fetch data
@@ -54,7 +57,7 @@ const ProductDetails = () => {
             <div>
               <p className="font-bold text-gray text-xl mb-3">₱{product?.price}</p>
               <div>
-                <Button>
+                <Button onClick={() => setIsOpen(true)}>
                   <p className="px-5">INQUIRE NOW!</p>
                 </Button>
               </div>
@@ -62,6 +65,11 @@ const ProductDetails = () => {
           </div>
         </div>
       </section>
+      {isOpen && (
+        <Modal openModal={isOpen} onClose={() => setIsOpen(false)}>
+          <BookingForm product={product} />
+        </Modal>
+      )}
     </Container>
   );
 };

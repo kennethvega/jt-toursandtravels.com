@@ -4,10 +4,11 @@ export type Booking = {
   contact: string;
   email: string;
   status: boolean;
-  customerCount: string;
+  adultCount: string;
+  childCount: string;
   numberOfRooms: string;
   hotel: string;
-  tourDate: string;
+  tourDate: string | undefined;
   note: string;
 };
 export type BookingsType = {
@@ -17,7 +18,8 @@ export type BookingsType = {
   contact: string;
   email: string;
   status: boolean;
-  customerCount: string;
+  adultCount: string;
+  childCount: string;
   numberOfRooms: string;
   hotel: string;
   tourDate: string;

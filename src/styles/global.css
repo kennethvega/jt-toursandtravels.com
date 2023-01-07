@@ -35,7 +35,10 @@
   }
 
   label {
-    @apply flex flex-col w-[30rem];
+    @apply flex flex-col w-[30rem] text-gray mb-1;
+  }
+  input {
+    @apply w-full border border-lightGray p-1 mb-3 bg-white;
   }
 }
 
