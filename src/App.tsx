@@ -5,6 +5,7 @@ import ScrollToTop from './component/ScrollToTop';
 
 import Home from './pages/Home';
 import ProductDetails from './pages/ProductDetails';
+import Success from './pages/Success';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/tour/:id" element={<ProductDetails />} />
+            <Route path="/thankyou" element={<Success />} />
           </Routes>
         </ScrollToTop>
         <Footer />
