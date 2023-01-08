@@ -5,7 +5,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import { BsFacebook, BsTwitter } from 'react-icons/bs';
 const Footer = () => {
   return (
-    <footer className="p-10 pt-10 bg-[#F5F5F5] w-full">
+    <footer className="p-10 pt-10 sm:p-2 bg-[#F5F5F5] w-full mx-auto">
       <Container>
         <div className="grid grid-cols-4-custom  gap-10">
           <div className="flex flex-col gap-3">
@@ -63,7 +63,9 @@ const Footer = () => {
           <div>
             <p className="font-semibold">Social links</p>
             <div className="flex gap-5 mt-6 text-xl text-gray">
-              <BsFacebook className="cursor-pointer  hover:text-blue" />
+              <a href="https://www.facebook.com/profile.php?id=100087892865927" target="_blank" rel="noopener noreferrer">
+                <BsFacebook className="cursor-pointer  hover:text-blue" />
+              </a>
               <BsTwitter className="cursor-not-allowed" />
             </div>
           </div>

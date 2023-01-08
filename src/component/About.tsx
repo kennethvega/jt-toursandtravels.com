@@ -8,8 +8,8 @@ const About = () => {
         <h3 className="mb-2  text-2xl font-semibold text-darkBlue border-b-8 border-blue py-2">ABOUT US</h3>
       </div>
       <p className="text-2xl text-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur officiis necessitatibus eligendi, laudantium aperiam minus possimus illo voluptas! Non aperiam repudiandae dolor sunt quam. Repellat quia ducimus eos debitis tempore! Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Veniam velit debitis sit porro commodi itaque, explicabo inventore temporibus repudiandae facilis doloremque dolorum libero dicta vel nihil quia maxime. Voluptatem, repudiandae.
+        JT tours and travels is a duly licensed travel agency in the Philippines providing comprehensive services for groups and individuals to and from country. JT tours and travels, Inc. caters to both group and individual clients. We offer
+        complete local and international ground arrangements at very competitive prices. Known for its efficient and professional service.
       </p>
     </Container>
   );

@@ -9,28 +9,29 @@ const Hero = () => {
   return (
     <Container>
       <section className="min-h-[100vh] min-w-full flex items-center justify-center">
-        <div className="-mt-3 flex justify-between w-full gap-5">
-          <div className="flex flex-col gap-5 max-w-2xl">
-            <motion.h1 initial={{ y: 60, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.4, delay: 0.2, ease: 'easeInOut' }} className="text-5xl font-bold text-darkBlue">
-              Travel Around The World With JT Tours & Travels
+        <div className="-mt-3 xmd:-mt-10 xsm:mt-10 flex justify-between xl:flex-col  gap-5">
+          <div className="flex flex-col xl:items-center xl:text-center gap-5 max-w-2xl">
+            <motion.h1 initial={{ y: 60, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.4, delay: 0.2, ease: 'easeInOut' }} className="text-5xl xmd:text-4xl xxsm:text-2xl font-bold text-darkBlue">
+              START YOUR <span className="text-blue">NEW ADVENTURE AROUND THE WORLD</span> WITH US
             </motion.h1>
-            <motion.h3 initial={{ y: 60, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.4, delay: 0.3, ease: 'easeInOut' }} className="text-gray text-2xl">
-              The best travel agency description, and the best travel agency description
+            <motion.h3 initial={{ y: 60, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.4, delay: 0.3, ease: 'easeInOut' }} className="text-gray text-2xl xmd:text-xl xxsm:text-base">
+              Airline Tickets | Hotel Accommodation | Tour Packages | Travel Insurance | Visa Assistance
             </motion.h3>
             <motion.div initial={{ y: 60, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.4, delay: 0.4, ease: 'easeInOut' }} className="mt-6">
               <Link to="/#product">
-                <Button>Explore travel packages</Button>
+                <Button>Explore tour packages</Button>
               </Link>
             </motion.div>
-            <motion.div initial={{ y: 60, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.4, delay: 0.5, ease: 'easeInOut' }} className="mt-10">
-              <p className="text-gray">Partnership with</p>
+            <motion.div initial={{ y: 60, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.4, delay: 0.5, ease: 'easeInOut' }} className="mt-10 xmd:mt-0">
               <div className="flex gap-10 items-center">
                 <img src={cebuPacific} alt="cebu pacific logo" />
                 <img src={deptTourism} alt="department of tourism logo" />
               </div>
             </motion.div>
           </div>
-          <motion.img initial={{ y: 60, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.6, ease: 'easeInOut' }} src={heroImage} alt="tourist destination images" className="max-h-[27rem] -mt-5" />
+          <div className="xl:mx-auto">
+            <motion.img initial={{ y: 60, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.6, ease: 'easeInOut' }} src={heroImage} alt="tourist destination images" className="max-h-[27rem] xmd:max-h-[20rem] -mt-5" />
+          </div>
         </div>
       </section>
     </Container>

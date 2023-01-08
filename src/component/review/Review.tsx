@@ -7,7 +7,7 @@ const Review = () => {
     <Container>
       <section className="mt-10">
         <div className="flex justify-center">
-          <h3 className="mb-10 text-2xl font-semibold text-darkBlue border-b-8 border-blue py-2">WE MAKE PEOPLE GENUINELY HAPPY</h3>
+          <h3 className="mb-10 text-2xl text-center font-semibold text-darkBlue border-b-8 border-blue py-2">WE MAKE PEOPLE GENUINELY HAPPY</h3>
         </div>
         <ReviewList />
       </section>
