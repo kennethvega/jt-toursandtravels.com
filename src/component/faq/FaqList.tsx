@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect } from 'react';
 import { getAllFaqs } from '../../redux/features/faq/faqSlice';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import FaqCard from './FaqCard';

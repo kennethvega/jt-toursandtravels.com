@@ -1,4 +1,3 @@
-import React from 'react';
 import About from '../component/About';
 import Faq from '../component/faq/Faq';
 import Hero from '../component/Hero';

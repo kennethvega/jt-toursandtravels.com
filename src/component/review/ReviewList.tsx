@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import ReviewCard from './ReviewCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import required modules

@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from 'react';
+import React, { Dispatch, FormEvent, SetStateAction, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createBooking } from '../redux/features/bookings/bookingSlice';
 import { useAppDispatch } from '../redux/hooks';
@@ -9,9 +9,10 @@ import Loading from './utility/Loading';
 
 type BookingFormProps = {
   product: ProductType | null;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
 };
 
-const BookingForm = ({ product }: BookingFormProps) => {
+const BookingForm = ({ product, setIsOpen }: BookingFormProps) => {
   const initialState = {
     packageName: `${product?.city} | ${product?.country} | ${product?.price}`,
     tourDate: product?.date,
@@ -62,6 +63,7 @@ const BookingForm = ({ product }: BookingFormProps) => {
   return (
     <Container>
       <form onSubmit={saveBooking} className="bg-white p-10 sm:p-2 rounded-md">
+        <Button onClick={() => setIsOpen(false)}>&larr; Back</Button>
         <h3 className="text-2xl font-semibold text-darkBlue">Please fill out the form</h3>
         <p className="text-lg mt-1">
           <span className="font-bold text-darkBlue">Tour:</span> {`${product?.city} | ${product?.country} | ₱${product?.price}`}

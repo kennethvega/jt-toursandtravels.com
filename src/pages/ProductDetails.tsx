@@ -89,7 +89,7 @@ const ProductDetails = () => {
             )}
           </>
         ) : (
-          <BookingForm product={product} />
+          <BookingForm product={product} setIsOpen={setIsOpen}/>
         )}
       </>
     </Container>

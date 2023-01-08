@@ -5,7 +5,6 @@ import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import Search from '../Search';
 import ToursCard from './ToursCard';
 import { AnimatePresence, motion } from 'framer-motion';
-import { ProductType } from '../../ts/productTypes';
 
 const ToursList = () => {
   const dispatch = useAppDispatch();

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { BsQuestionCircle } from 'react-icons/bs';
 import { Collapse } from 'react-collapse';

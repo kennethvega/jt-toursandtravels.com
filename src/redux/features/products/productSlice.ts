@@ -22,34 +22,10 @@ const initialState: State = {
   message: '',
 };
 
-// CREATE NEW PRODUCT
-export const createProduct = createAsyncThunk('products/create', async (formData: Product, thunkAPI) => {
-  try {
-    return await productService.createProduct(formData);
-  } catch (error: any) {
-    // error message format
-    const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString();
-    console.log(message);
-    return thunkAPI.rejectWithValue(message);
-  }
-});
-
 // GET ALL PRODUCTS
 export const getAllProducts = createAsyncThunk('products/getAllProducts', async (_, thunkAPI) => {
   try {
     return await productService.getAllProducts();
-  } catch (error: any) {
-    // error message format
-    const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString();
-    console.log(message);
-    return thunkAPI.rejectWithValue(message);
-  }
-});
-
-// DELETE A PRODUCT
-export const deleteProduct = createAsyncThunk('products/delete', async (id: string, thunkAPI) => {
-  try {
-    return await productService.deleteProduct(id);
   } catch (error: any) {
     // error message format
     const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString();
@@ -69,21 +45,6 @@ export const getProduct = createAsyncThunk('products/getProduct', async (id: str
   }
 });
 
-type UpdateProps = {
-  id: string | undefined;
-  formData: Product;
-};
-// UPDATE PRODUCT
-export const updateProduct = createAsyncThunk('products/updateProduct', async ({ id, formData }: UpdateProps, thunkAPI) => {
-  try {
-    return await productService.updateProduct(id, formData);
-  } catch (error: any) {
-    const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString();
-    console.log(message);
-    return thunkAPI.rejectWithValue(message);
-  }
-});
-
 // ProductSlice------------
 const productSlice = createSlice({
   name: 'product',
@@ -95,21 +56,7 @@ const productSlice = createSlice({
   },
   // loading,success,error state asyncThunk
   extraReducers: (builder) => {
-    builder //CREATE PRODUCT
-      .addCase(createProduct.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(createProduct.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.isSuccess = true;
-        state.isError = false;
-        state.products.unshift(action.payload);
-      })
-      .addCase(createProduct.rejected, (state, action) => {
-        state.isLoading = false;
-        state.isError = true;
-        state.message = action.payload;
-      }) //GET ALL PRODUCTS
+    builder //GET ALL PRODUCTS
       .addCase(getAllProducts.pending, (state) => {
         state.isLoading = true;
       })
@@ -124,19 +71,6 @@ const productSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;
-      }) //DELETE PRODUCT
-      .addCase(deleteProduct.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(deleteProduct.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.isSuccess = true;
-        state.isError = false;
-      })
-      .addCase(deleteProduct.rejected, (state, action) => {
-        state.isLoading = false;
-        state.isError = true;
-        state.message = action.payload;
       }) //GET A SINGLE PRODUCT
       .addCase(getProduct.pending, (state) => {
         state.isLoading = true;
@@ -148,19 +82,6 @@ const productSlice = createSlice({
         state.product = action.payload;
       })
       .addCase(getProduct.rejected, (state, action) => {
-        state.isLoading = false;
-        state.isError = true;
-        state.message = action.payload;
-      }) //UPDATE PRODUCT
-      .addCase(updateProduct.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(updateProduct.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.isSuccess = true;
-        state.isError = false;
-      })
-      .addCase(updateProduct.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;

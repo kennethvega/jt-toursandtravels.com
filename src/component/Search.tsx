@@ -1,5 +1,4 @@
 
-
 type SearchProps = {
   value: string | undefined;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;

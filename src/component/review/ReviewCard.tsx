@@ -1,4 +1,3 @@
-import React from 'react';
 import { ImQuotesRight } from 'react-icons/im';
 const ReviewCard = ({ review }: any) => {
   return (

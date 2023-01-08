@@ -1,4 +1,3 @@
-import React from 'react';
 import Container from '../utility/Container';
 import ReviewList from './ReviewList';
 

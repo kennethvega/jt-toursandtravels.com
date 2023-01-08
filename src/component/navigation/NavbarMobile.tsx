@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Hamburger from 'hamburger-react';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
 import { HashLink as Link } from 'react-router-hash-link';
@@ -19,27 +19,27 @@ const NavbarMobile = () => {
       </header>
       <nav>
         <ul id="primary-navigation" className={`${isOpen ? 'active' : ''} primary-navigation  flex justify-center items-center gap-5 text-sm z-[1000] bg-white`}>
-          <li>
+          <li onClick={() => setIsOpen(false)}>
             <Link to="/#" className="link p-2">
               Home
             </Link>
           </li>
-          <li>
+          <li onClick={() => setIsOpen(false)}>
             <Link to="/#product" className="link p-2 ">
               Travel packages
             </Link>
           </li>
-          <li>
+          <li onClick={() => setIsOpen(false)}>
             <Link to="/#about" className="link p-2">
               About
             </Link>
           </li>
-          <li>
+          <li onClick={() => setIsOpen(false)}>
             <Link to="/#faq" className="link p-2">
               FAQ's
             </Link>
           </li>
-          <li>
+          <li onClick={() => setIsOpen(false)}>
             <Link to="/#contact" className="link p-2">
               Contact
             </Link>

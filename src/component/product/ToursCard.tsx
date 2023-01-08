@@ -1,4 +1,3 @@
-import React from 'react';
 import { IoLocationSharp } from 'react-icons/io5';
 import { ProductType } from '../../ts/productTypes';
 import { HashLink as Link } from 'react-router-hash-link';

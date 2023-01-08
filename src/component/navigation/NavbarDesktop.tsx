@@ -1,4 +1,3 @@
-import React from 'react';
 import Container from '../utility/Container';
 import { HashLink as Link } from 'react-router-hash-link';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
