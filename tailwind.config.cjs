@@ -10,7 +10,7 @@ module.exports = {
       blueHover: "#3181FA",
       darkBlue: "#132240",
       gray: "#656565",
-      lightGray: "#ECECEC",
+      lightGray: "#d1d5db",
       black: "#000",
     },
     extend: {},
