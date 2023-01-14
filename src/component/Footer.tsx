@@ -5,7 +5,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import { BsFacebook, BsTwitter } from 'react-icons/bs';
 const Footer = () => {
   return (
-    <footer className="p-10 pt-10 sm:p-2 bg-[#F5F5F5] w-full mx-auto">
+    <footer className="p-10 pt-10 sm:p-2 bg-lightGray w-full mx-auto">
       <Container>
         <div className="grid grid-cols-4-custom  gap-10">
           <div className="flex flex-col gap-3">

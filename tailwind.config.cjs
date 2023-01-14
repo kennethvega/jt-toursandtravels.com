@@ -5,12 +5,12 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      white: "#FBFAF8",
+      white: "#f8fafc",
       blue: "#3181FA",
       blueHover: "#1d4ed8",
       darkBlue: "#132240",
       gray: "#656565",
-      lightGray: "#d1d5db",
+      lightGray: "#f1f5f9",
       black: "#000",
     },
     screens: {

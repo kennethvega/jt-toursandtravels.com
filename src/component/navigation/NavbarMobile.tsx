@@ -18,7 +18,7 @@ const NavbarMobile = () => {
         </Link>
       </header>
       <nav>
-        <ul id="primary-navigation" className={`${isOpen ? 'active' : ''} primary-navigation  flex justify-center items-center gap-5 text-sm z-[1000] bg-white`}>
+        <ul id="primary-navigation" className={`${isOpen ? 'active' : ''} primary-navigation  flex justify-center items-center gap-5 text-base z-[1000] bg-white`}>
           <li onClick={() => setIsOpen(false)}>
             <Link to="/#" className="link p-2">
               Home
@@ -26,7 +26,7 @@ const NavbarMobile = () => {
           </li>
           <li onClick={() => setIsOpen(false)}>
             <Link to="/#product" className="link p-2 ">
-              Travel packages
+              Packages
             </Link>
           </li>
           <li onClick={() => setIsOpen(false)}>

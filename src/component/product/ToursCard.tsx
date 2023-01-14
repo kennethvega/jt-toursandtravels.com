@@ -14,7 +14,7 @@ const ToursCard = ({ product }: ToursCardProps) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 30 }}
       transition={{ duration: 0.3 }}
-      className="bg-[#fff] rounded-md sm:rounded shadow overflow-hidden border-b-8 border-blue max-h-[23rem] max-w-[19rem] sm:max-h-[22rem] sm:max-w-[14rem] xxsm:max-w-[12rem] xsmall:max-w-[10rem]"
+      className="bg-[#fff] rounded-md sm:rounded shadow overflow-hidden border-b-8 border-blue max-h-[23rem] max-w-[19rem] "
     >
       <img src={product.image?.imageURL} alt="tours image" className="h-[15rem] w-[20rem]" />
       <div className="p-2">
