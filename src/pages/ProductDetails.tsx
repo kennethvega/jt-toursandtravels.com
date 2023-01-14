@@ -1,4 +1,4 @@
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { IoLocationSharp } from 'react-icons/io5';
 import { useParams } from 'react-router-dom';
 import Container from '../component/utility/Container';
@@ -42,7 +42,7 @@ const ProductDetails = () => {
             {!isLoading ? (
               <section className="min-h-[80vh] mb-10">
                 <div className="grid grid-cols-2-custom gap-10 mt-10">
-                  <img src={product?.image?.imageURL} alt="tours-image" className="h-[30rem] rounded" />
+                  <img src={product?.image?.imageURL} alt="tours-image" className="h-[30rem] rounded bg-cover sm:h-[25rem]" />
                   <div className="flex flex-col justify-between">
                     <div className="flex flex-col gap-3">
                       <h1 className="text-2xl font-bold text-darkBlue ">{product?.city.toUpperCase()}</h1>
@@ -89,7 +89,7 @@ const ProductDetails = () => {
             )}
           </>
         ) : (
-          <BookingForm product={product} setIsOpen={setIsOpen}/>
+          <BookingForm product={product} setIsOpen={setIsOpen} />
         )}
       </>
     </Container>

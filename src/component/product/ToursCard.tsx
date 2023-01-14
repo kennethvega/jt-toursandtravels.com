@@ -16,7 +16,7 @@ const ToursCard = ({ product }: ToursCardProps) => {
       transition={{ duration: 0.3 }}
       className="bg-[#fff] rounded-md sm:rounded shadow overflow-hidden border-b-8 border-blue max-h-[23rem] max-w-[19rem] "
     >
-      <img src={product.image?.imageURL} alt="tours image" className="h-[15rem] w-[20rem]" />
+      <img src={product.image?.imageURL} alt="tours image" className="h-[15rem] w-[20rem] bg-cover" />
       <div className="p-2">
         <div className="flex justify-between">
           <Link to={`/tour/${product._id}`}>
