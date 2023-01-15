@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   return (
     <Container>
-      <section className="mt-36 mb-14 xl:mt-20 sm:mt-10  w-full flex  justify-center">
+      <section className="mt-36 mb-16 xl:mt-20 sm:mt-10  w-full flex  justify-center">
         <div className=" flex justify-between xl:flex-col  gap-5">
           <div className="flex flex-col xl:items-center xl:text-center gap-5 justify-between max-w-2xl">
             <motion.h1 initial={{ y: 60, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.4, delay: 0.2, ease: 'easeInOut' }} className="text-4xl xmd:text-4xl xxsm:text-2xl font-bold  text-darkBlue">
