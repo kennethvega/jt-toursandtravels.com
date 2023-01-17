@@ -42,7 +42,7 @@ const ProductDetails = () => {
             {!isLoading ? (
               <section className="min-h-[80vh] mb-10">
                 <div className="grid grid-cols-2-custom gap-10 mt-10">
-                  <img src={product?.image?.imageURL} alt="tours-image" className="h-[30rem] rounded bg-cover sm:h-[25rem]" />
+                  <img src={product?.image?.imageURL} alt="tours-image" className="h-[30rem] rounded-lg bg-cover bg-center sm:h-[25rem] shadow-lg" />
                   <div className="flex flex-col justify-between">
                     <div className="flex flex-col gap-3">
                       <h1 className="text-2xl font-bold text-darkBlue ">{product?.city.toUpperCase()}</h1>

@@ -10,8 +10,10 @@ module.exports = {
       blueHover: "#1d4ed8",
       darkBlue: "#132240",
       gray: "#656565",
+      semiGray: "#e5e7eb",
       lightGray: "#f1f5f9",
       black: "#000",
+      yellow:'#FEBF00'
     },
     screens: {
       "2xl": { max: "1535px" },

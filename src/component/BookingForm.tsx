@@ -62,7 +62,7 @@ const BookingForm = ({ product, setIsOpen }: BookingFormProps) => {
 
   return (
     <Container>
-      <form onSubmit={saveBooking} className="bg-white p-10 sm:p-2 rounded-md">
+      <form onSubmit={saveBooking} className="bg-lightGray p-10 sm:p-2 rounded-md mb-10">
         <Button onClick={() => setIsOpen(false)}>&larr; Back</Button>
         <h3 className="text-2xl font-semibold text-darkBlue">Please fill out the form</h3>
         <p className="text-lg mt-1">
