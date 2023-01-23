@@ -13,7 +13,7 @@ const Home = () => {
       <section id="product" className="pt-[64px]">
         <Tours />
       </section>
-      <div id="about" className="pt-[64px] bg-[#F5F5F5]"></div>
+      <div id="about" className="pt-[64px] bg-lightGray"></div>
       <motion.section viewport={{ once: true, amount: 0.5 }} initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'linear' }} className="mt-6">
         <About />
         <Review />
